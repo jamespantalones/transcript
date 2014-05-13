@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,p,a{
 }
 
 h1{
-	font-size: 3em;
+	font-size: 2em;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -27,14 +27,15 @@ a{
 }
 
 .text{
-	width: 60%;
-	margin-left: 20%;
+	width: 80%;
+	margin-left: 10%;
 	p{
 		line-height: 1.5;
-		font-size: 1.8em;
+		font-size: 1.2em;
 		font-weight: lighter;
 		&.intro{
 			text-decoration: underline;
+			font-size: 0.8em;
 		}
 	}
 }
@@ -44,11 +45,11 @@ a{
 	font-weight: bold;
 	font-family: helvetica;
 	p{
-		font-size: 1.8em;
+		font-size: 0.8em;
 		text-decoration: underline;
 	}
 	span{
-		font-size: 2em;
+		font-size: 1.2em;
 
 	}
 }
