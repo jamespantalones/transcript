@@ -1,0 +1,41 @@
+body {
+  margin: 20px; }
+
+h1, h2, h3, h4, h5, p, a {
+  font-family: helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: center; }
+
+h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+a {
+  color: black;
+  text-decoration: none; }
+  a:hover {
+    opacity: 0.5; }
+
+.video {
+  text-align: center; }
+
+.text {
+  width: 60%;
+  margin-left: 20%; }
+  .text p {
+    line-height: 1.5;
+    font-size: 1.8em;
+    font-weight: lighter; }
+    .text p.intro {
+      text-decoration: underline; }
+
+.squirt {
+  text-align: center;
+  font-weight: bold;
+  font-family: helvetica; }
+  .squirt p {
+    font-size: 1.8em;
+    text-decoration: underline; }
+  .squirt span {
+    font-size: 2em; }
