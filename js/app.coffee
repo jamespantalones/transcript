@@ -39,6 +39,9 @@ onPlayerStateChange = (event) ->
 			flag = 1
 		else
 			return
+	if (event.data == 0)
+		hideProgressControls()
+		localStorage.setItem('progress', 0)
 
 
 
@@ -58,13 +61,15 @@ resumePlaying = ->
 	retrieveProgress(duration)
 
 resetPlaying = ->
-	localStorage.removeItem('progress')
+	localStorage.setItem('progress',0)
+	console.log "Progress reset"
 	player.seekTo(0)
 
 youTubeTime = ->
 	currentTime = player.getCurrentTime()
 	currentTime = Math.floor currentTime
 	saveProgress(currentTime)
+
 	
 
 saveProgress = (currentTime) ->
@@ -72,7 +77,9 @@ saveProgress = (currentTime) ->
 	progress = localStorage.getItem('progress')
 	if currentTime > progress
 		localStorage.setItem('progress', currentTime)
+		console.log "progress saved at #{currentTime}"
 	else
+		console.log "progress not saved, since it's less than your previous progress"
 		return 0
 
 showProgressControls = ->
@@ -81,14 +88,19 @@ showProgressControls = ->
 		$('.reset').show()
 		$('.resume').show()
 
+hideProgressControls = ->
+	$('.reset').fadeOut()
+	$('.resume').fadeOut()
+
 
 retrieveProgress = (duration) ->
 	progress = localStorage.getItem('progress')
 	if progress < Math.floor(duration)
 		#give it a 5 second preroll
-		player.seekTo(progress - 5)
+		player.seekTo(progress - 3)
+		console.log "Video started from previous position of #{progress-3} minus three seconds"
 	else
-		localStorage.removeItem('progress')
+		localStorage.setItem('progress',0)
 
 resizeVideo = ->
 	width = $(document).width()
