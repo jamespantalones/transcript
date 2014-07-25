@@ -31,16 +31,6 @@ a {
       text-decoration: underline;
       font-size: 0.8em; }
 
-.reset {
-  position: fixed;
-  left: 20px;
-  top: 40%; }
-
-.resume {
-  position: fixed;
-  right: 20px;
-  top: 40%; }
-
 .reset, .resume {
   display: none; }
   .reset a, .resume a {

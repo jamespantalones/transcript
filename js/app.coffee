@@ -6,13 +6,16 @@ player = {}
 flag = 0
 state = 0
 duration = 0
-
+width = $(document).width()
+ratio = 390 / 640
+YTheight = width / 2
+YTwidth = YTheight * ratio
 
 
 window.onYouTubeIframeAPIReady = ->
 	player = new YT.Player('player', {
-		height: '390'
-		width: '640'
+		height: YTwidth
+		width: YTheight
 		videoId: 'CG48Y5dL9J8',
 		events: {
 			'onReady': onPlayerReady
@@ -47,6 +50,8 @@ initData = ->
 		retrieveProgress(duration)
 	$('.reset a').bind 'click', ->
 		resetPlaying()
+	$(window).bind 'resize', ->
+		resizeVideo()
 
 
 resumePlaying = ->
@@ -84,6 +89,13 @@ retrieveProgress = (duration) ->
 		player.seekTo(progress - 5)
 	else
 		localStorage.removeItem('progress')
+
+resizeVideo = ->
+	width = $(document).width()
+	YTwidth = width / 2.5
+	YTheight = YTwidth * ratio
+	$('#player').attr('width', YTwidth)
+	$('#player').attr('height', YTheight)
 
 
 
