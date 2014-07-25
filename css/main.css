@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, p, a {
   text-align: center; }
 
 h1 {
-  font-size: 2em;
+  font-size: 1em;
   text-transform: uppercase;
   font-weight: bold; }
 
@@ -31,12 +31,19 @@ a {
       text-decoration: underline;
       font-size: 0.8em; }
 
-.squirt {
-  text-align: center;
-  font-weight: bold;
-  font-family: helvetica; }
-  .squirt p {
-    font-size: 0.8em;
-    text-decoration: underline; }
-  .squirt span {
-    font-size: 1.2em; }
+.reset {
+  position: fixed;
+  left: 20px;
+  top: 40%; }
+
+.resume {
+  position: fixed;
+  right: 20px;
+  top: 40%; }
+
+.reset, .resume {
+  display: none; }
+  .reset a, .resume a {
+    color: black; }
+    .reset a:hover, .resume a:hover {
+      text-decoration: underline; }

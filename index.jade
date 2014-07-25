@@ -7,8 +7,14 @@ body
 	h1 YouTube Transcription Test
 	.video
 		div(id="player")
+	.reset
+		a(href="#")
+			h3 RESET VIDEO PROGRESS
+	.resume
+		a(href="#")
+			h3 RESUME VIDEO PROGRESS
 	.text
-		p(class="intro") CLICK A SENTENCE
+		p(class="intro") CLICK A SENTENCE BELOW
 		p.
 			<a href="#"><span data-time="12">This is the so called keyboard.</span></a>
 			<a href="#"><span data-time="15"> This is all Buchla equipment.</span></a>
@@ -17,9 +23,5 @@ body
 			<a href="#"><span data-time="42">What's happening is I have the voltage</span></a>
 			<a href="#"><span data-time="46">from the x-y axis...</span></a>
 
-
-	.squirt
-		p OR JUST WATCH
-		span watch this space...
 	script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
 	script(type="text/javascript", src="js/app.js")

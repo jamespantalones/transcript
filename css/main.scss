@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,p,a{
 }
 
 h1{
-	font-size: 2em;
+	font-size: 1em;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -40,16 +40,24 @@ a{
 	}
 }
 
-.squirt{
-	text-align: center;
-	font-weight: bold;
-	font-family: helvetica;
-	p{
-		font-size: 0.8em;
-		text-decoration: underline;
-	}
-	span{
-		font-size: 1.2em;
+.reset{
+	position: fixed;
+	left: 20px;
+	top: 40%;
+}
 
+.resume{
+	position: fixed;
+	right: 20px;
+	top: 40%;
+}
+
+.reset, .resume{
+	display: none;
+	a{
+		color: black;
+		&:hover{
+			text-decoration: underline;
+		}
 	}
 }
